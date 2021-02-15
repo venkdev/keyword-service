@@ -18,13 +18,12 @@ public class SearchVolumeController {
     }
 
     @GetMapping("/estimate")
-    public EstimateDTO test(@RequestParam String keyword){
+    public EstimateDTO getEstimate(@RequestParam String keyword){
         if(StringUtils.isEmpty(keyword))
             return EstimateDTO.newBuilder().setKeyword(keyword).setEstimate(0).createEstimateDTO();
 
         return EstimateDTO.newBuilder().setKeyword(keyword)
                 .setEstimate(searchVolumeService.estimateSearchVolume(keyword)).createEstimateDTO();
-
 
     }
 }
