@@ -7,4 +7,6 @@ public class ApplicationConstant {
     public static final String PREFIX = "prefix";
     public static final String KEYWORD_IN_BRACES = "{keyword}";
     public static final String SPACE = " ";
+    public static final String SEARCH_TERM_MSG = "Search term - ";
+    public static final String MATCH_MSG = "Matched suggestion - ";
 }
